@@ -10,10 +10,13 @@ describe('Modals', () => {
     props = {
       modalsConfig: [
         {
-          key: 'FOO', title: 'foo', buttons: [], content: 'content',
+          show: true, key: '1', title: 'foo', body: 'bar', buttons: [{label: 'Save', callback: jest.fn()}],
         },
         {
-          key: 'BAR', title: 'bar', buttons: [],
+          show: false, key: '2', title: '', body: '', buttons: [],
+        },
+        {
+          show: true, key: '3', content: (<div>Test</div>),
         },
       ],
     };

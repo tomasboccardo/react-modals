@@ -1,18 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Modal} from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
+import { ModalConfigPropTypes } from './prop-types';
 
 const Modals = ({ modalsConfig }) => (
   <div>
     {modalsConfig.map((config) => {
-      const { content, ...props } = config;
+      const {
+        key,
+        show,
+        content,
+        title,
+        body,
+        buttons,
+        ...props
+      } = config;
+
       return (
-        <Modal {...props}>
-          {content &&
-          <div>
-            <config.content />
-          </div>}
+        <Modal show={show} {...props} key={key}>
+          {content || (
+            <React.Fragment>
+              <Modal.Header>
+                <Modal.Title>{title}</Modal.Title>
+              </Modal.Header>
+
+              <Modal.Body>{body}</Modal.Body>
+
+              <Modal.Footer>
+                {buttons.map(button => (
+                  <Button key={button.label} onClick={button.callback}>button.label</Button>
+                ))}
+              </Modal.Footer>
+            </React.Fragment>
+          )}
         </Modal>
       );
     })}
@@ -20,7 +41,7 @@ const Modals = ({ modalsConfig }) => (
 );
 
 Modals.propTypes = {
-  modalsConfig: PropTypes.arrayOf(PropTypes.shape(Modal.propTypes)),
+  modalsConfig: ModalConfigPropTypes,
 };
 
 Modals.defaultProps = {
