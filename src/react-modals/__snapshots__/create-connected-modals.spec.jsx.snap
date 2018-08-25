@@ -31,7 +31,7 @@ ShallowWrapper {
         Object {
           "buttons": Array [],
           "onButtonClick": [Function],
-          "shouldShow": true,
+          "show": true,
           "title": "title",
         },
       ],
@@ -50,7 +50,7 @@ ShallowWrapper {
           Object {
             "buttons": Array [],
             "onButtonClick": [Function],
-            "shouldShow": true,
+            "show": true,
             "title": "title",
           },
         ],

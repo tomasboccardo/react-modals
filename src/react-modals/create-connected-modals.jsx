@@ -14,7 +14,7 @@ export const withActionDispatching = (Modals) => {
   const DispatcherModals = ({ modalsConfig, dispatch }) => {
     const configs = modalsConfig.map(config => ({
       // defaults
-      shouldShow: true,
+      show: true,
       // user config
       ...config,
       // overrides
