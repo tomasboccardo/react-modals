@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <HeaderWrapper>
       <Logo/>
-      <AppTitle>Welcome to React</AppTitle>
+      <AppTitle>React Modals</AppTitle>
     </HeaderWrapper>
   )
 }

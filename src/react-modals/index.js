@@ -1,9 +1,13 @@
 import createConnectedModals from './create-connected-modals';
 import combineConfigurators from './combine-configurators';
-import * as configCreators from './config-creators';
+import * as configs from './config-creators';
+import { withActionDispatching } from './create-connected-modals';
+import Modals from './presentational'
 
 export {
-  createConnectedModals,
+  Modals,
+  withActionDispatching,
   combineConfigurators,
-  configCreators,
+  createConnectedModals,
+  configs,
 }

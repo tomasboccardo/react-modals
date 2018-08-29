@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { createLogger } from 'redux-logger';
 
@@ -12,6 +13,7 @@ const logger = createLogger({
 
 const configureStore = (reducers, preLoadedState) => {
   const middlewares = [
+    thunk,
     logger,
   ].filter(Boolean);
 

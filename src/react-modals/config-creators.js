@@ -1,4 +1,16 @@
-import { LAYOUT, SIZE, ICON } from '@m/atom/lib/modal';
+
+const LAYOUT = {
+  MESSAGING: 'MESSAGING',
+  CONTENT: 'CONTENT',
+};
+
+const SIZE = {
+  REGULAR: 'REGULAR',
+}
+
+const ICON = {
+
+}
 
 /**
  * A set of short-hand functions for configuring the common scenarios
@@ -85,7 +97,7 @@ export const createErrorConfig = (configOverride) => ({
  */
 export const createClosedConfig = (configOverride) => ({
   title: '',
-  shouldShow: false,
+  show: false,
   buttons: [],
   ...configOverride,
 });

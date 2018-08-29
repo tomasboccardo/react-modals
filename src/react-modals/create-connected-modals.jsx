@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Modal} from 'react-bootstrap';
-
 import Presentational from './presentational';
 import { ModalConfigPropTypes } from './prop-types';
 

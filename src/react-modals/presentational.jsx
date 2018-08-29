@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import { Modal, Button } from 'react-bootstrap';
 import { ModalConfigPropTypes } from './prop-types';
 
@@ -14,6 +12,7 @@ const Modals = ({ modalsConfig }) => (
         title,
         body,
         buttons,
+        onButtonClick,
         ...props
       } = config;
 
@@ -29,7 +28,7 @@ const Modals = ({ modalsConfig }) => (
 
               <Modal.Footer>
                 {buttons.map(button => (
-                  <Button key={button.label} onClick={button.callback}>button.label</Button>
+                  <Button key={button.label} onClick={() => onButtonClick(button)}>{button.label}</Button>
                 ))}
               </Modal.Footer>
             </React.Fragment>

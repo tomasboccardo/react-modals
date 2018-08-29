@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 export const MainPanelWrapper = styled.div`
-  flex: 4;
+  flex: 1;
   height: 100%;
-`
-
-export const AppIntro = styled.p`
-
+  padding: 40px;
 `
