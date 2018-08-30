@@ -5,7 +5,7 @@ const configConfirmChangesModal = (state) => {
   return state.userEditor.userIsConfirmingChanges
     ? {
     show: true,
-    title: 'Confirm Changes',
+    title: 'Confirm Save',
     body: 'Are you sure you want to save this user?',
     buttons: [
       { label: 'Yes', action: saveUser() },
