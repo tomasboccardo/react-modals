@@ -1,6 +1,5 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import { ModalConfigPropTypes } from './prop-types';
 
 const Modals = ({ modalsConfig }) => (
   <div>
@@ -38,10 +37,6 @@ const Modals = ({ modalsConfig }) => (
     })}
   </div>
 );
-
-Modals.propTypes = {
-  modalsConfig: ModalConfigPropTypes,
-};
 
 Modals.defaultProps = {
   modalsConfig: [],

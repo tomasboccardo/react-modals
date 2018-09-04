@@ -10,11 +10,12 @@ ShallowWrapper {
               "body": "bar",
               "buttons": Array [
                 Object {
-                  "callback": [Function],
+                  "action": [Function],
                   "label": "Save",
                 },
               ],
               "key": "1",
+              "onButtonClick": [Function],
               "show": true,
               "title": "foo",
             },
@@ -22,6 +23,7 @@ ShallowWrapper {
               "body": "",
               "buttons": Array [],
               "key": "2",
+              "onButtonClick": [Function],
               "show": false,
               "title": "",
             },
@@ -30,6 +32,7 @@ ShallowWrapper {
                 Test
         </div>,
               "key": "3",
+              "onButtonClick": [Function],
               "show": true,
             },
           ]
@@ -104,7 +107,7 @@ ShallowWrapper {
                                         disabled={false}
                                         onClick={[Function]}
                               >
-                                        button.label
+                                        Save
                               </Button>
                     </ModalFooter>
           </Unknown>
@@ -230,7 +233,7 @@ ShallowWrapper {
                                     disabled={false}
                                     onClick={[Function]}
                         >
-                                    button.label
+                                    Save
                         </Button>
             </ModalFooter>
 </Unknown>,
@@ -289,7 +292,7 @@ ShallowWrapper {
                                 disabled={false}
                                 onClick={[Function]}
                 >
-                                button.label
+                                Save
                 </Button>
 </ModalFooter>,
             ],
@@ -355,7 +358,7 @@ ShallowWrapper {
                     disabled={false}
                     onClick={[Function]}
 >
-                    button.label
+                    Save
 </Button>,
                 ],
                 "componentClass": "div",
@@ -371,12 +374,12 @@ ShallowWrapper {
                     "block": false,
                     "bsClass": "btn",
                     "bsStyle": "default",
-                    "children": "button.label",
+                    "children": "Save",
                     "disabled": false,
                     "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "button.label",
+                  "rendered": "Save",
                   "type": [Function],
                 },
               ],
@@ -637,7 +640,7 @@ ShallowWrapper {
                                                 disabled={false}
                                                 onClick={[Function]}
                                     >
-                                                button.label
+                                                Save
                                     </Button>
                         </ModalFooter>
             </Unknown>
@@ -763,7 +766,7 @@ ShallowWrapper {
                                           disabled={false}
                                           onClick={[Function]}
                             >
-                                          button.label
+                                          Save
                             </Button>
               </ModalFooter>
 </Unknown>,
@@ -822,7 +825,7 @@ ShallowWrapper {
                                     disabled={false}
                                     onClick={[Function]}
                   >
-                                    button.label
+                                    Save
                   </Button>
 </ModalFooter>,
               ],
@@ -888,7 +891,7 @@ ShallowWrapper {
                       disabled={false}
                       onClick={[Function]}
 >
-                      button.label
+                      Save
 </Button>,
                   ],
                   "componentClass": "div",
@@ -904,12 +907,12 @@ ShallowWrapper {
                       "block": false,
                       "bsClass": "btn",
                       "bsStyle": "default",
-                      "children": "button.label",
+                      "children": "Save",
                       "disabled": false,
                       "onClick": [Function],
                     },
                     "ref": null,
-                    "rendered": "button.label",
+                    "rendered": "Save",
                     "type": [Function],
                   },
                 ],

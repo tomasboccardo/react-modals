@@ -1,8 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import Presentational from './presentational';
-import { ModalConfigPropTypes } from './prop-types';
 
 /**
  * Decorates the modals configuration by allowing actions dispatching
@@ -24,11 +21,6 @@ export const withActionDispatching = (Modals) => {
     }));
 
     return <Modals modalsConfig={configs} />;
-  };
-
-  DispatcherModals.propTypes = {
-    dispatch: PropTypes.func,
-    modalsConfig: ModalConfigPropTypes,
   };
 
   DispatcherModals.defaultProps = {

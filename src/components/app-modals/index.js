@@ -4,8 +4,10 @@ import {
   combineConfigurators,
   withActionDispatching,
 } from '../../react-modals';
-import configConfirmSaveModal from '../../user-editor/confirm-changes';
+import configConfirmSave from '../../user-editor/confirm-save';
+import configConfirmDelete from '../../user-list/user-deletion/confirm-deletion';
 
 export default connect(combineConfigurators(
-  configConfirmSaveModal,
+  configConfirmSave,
+  configConfirmDelete,
 ))(withActionDispatching(Modals));

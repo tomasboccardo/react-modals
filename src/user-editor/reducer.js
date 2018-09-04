@@ -4,7 +4,7 @@ export const DEFAULT_STATE = {
   username: '',
   firstname: '',
   lastname: '',
-  userIsConfirmingChanges: false,
+  status: 'OFF',
 }
 
 export default handleActions({
@@ -14,11 +14,19 @@ export default handleActions({
   }),
   CONFIRM_SAVE: state => ({
     ...state,
-    userIsConfirmingChanges: true,
+    status: 'CONFIRM_SAVE',
   }),
-  SAVE_USER: (state) => DEFAULT_STATE,
+  SAVING_USER: (state) => ({
+    ...state,
+    status: 'LOADING',
+  }),
+  SAVE_USER: (state) => ({
+    ...DEFAULT_STATE,
+    status: 'SUCCESS',
+  }),
+  DISMISS_SUCCESS: (state) => DEFAULT_STATE,
   CANCEL_SAVE: state => ({
     ...state,
-    userIsConfirmingChanges: false,
+    status: 'OFF',
   }),
 }, DEFAULT_STATE);

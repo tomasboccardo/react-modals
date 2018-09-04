@@ -15,31 +15,31 @@ function UserForm({
   return (
     <form>
       <FormGroup controlId="username">
-          <ControlLabel>Username</ControlLabel>
-          <FormControl
-            type="text"
-            value={username}
-            placeholder="Username"
-            onChange={e => onUsernameUpdate(e.target.value)}
-          />
-        </FormGroup>
+        <ControlLabel>Username</ControlLabel>
+        <FormControl
+          type="text"
+          value={username}
+          placeholder="Username"
+          onChange={e => onUsernameUpdate(e.target.value)}
+        />
+      </FormGroup>
       <FormGroup controlId="firstname">
-          <ControlLabel>First Name</ControlLabel>
-          <FormControl
-            type="text"
-            value={firstname}
-            placeholder="First Name"
-            onChange={e => onFirstnameUpdate(e.target.value)}
-          />
-        </FormGroup>
+        <ControlLabel>First Name</ControlLabel>
+        <FormControl
+          type="text"
+          value={firstname}
+          placeholder="First Name"
+          onChange={e => onFirstnameUpdate(e.target.value)}
+        />
+      </FormGroup>
       <FormGroup controlId="lastname">
-          <ControlLabel>Last Name</ControlLabel>
-          <FormControl
-            type="text"
-            value={lastname}
-            placeholder="Last Name"
-            onChange={e => onLastnameUpdate(e.target.value)}
-          />
+        <ControlLabel>Last Name</ControlLabel>
+        <FormControl
+          type="text"
+          value={lastname}
+          placeholder="Last Name"
+          onChange={e => onLastnameUpdate(e.target.value)}
+        />
       </FormGroup>
       <Button onClick={onSave}>Save</Button>
     </form>

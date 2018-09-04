@@ -1,14 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { MainPanelWrapper } from './styled';
-import { actions, UserForm } from '../../user-editor';
+import { UserForm } from '../../user-editor';
 
-function MainPanel({ confirmChanges }) {
+export default function MainPanel() {
   return (
     <MainPanelWrapper>
-      <UserForm/>
+      <UserForm />
     </MainPanelWrapper>
   )
 }
-
-export default connect(null, { confirmChanges: actions.confirmChanges })(MainPanel);

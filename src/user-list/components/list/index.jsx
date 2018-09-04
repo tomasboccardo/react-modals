@@ -1,15 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
-import { CustomListGroupItem } from './styled';
+import UserItem from '../item';
+import { validateDeletion } from '../../user-deletion/actions';
+
 
 function UserList({
   users,
+  onDelete,
 }) {
   return (
     <ListGroup>
       {users.map(user => (
-        <CustomListGroupItem key={user.username} header={user.username}>{`${user.firstname} ${user.lastname}`}</CustomListGroupItem>
+        <UserItem
+          key={user.username}
+          user={user}
+          onDelete={() => onDelete(user)}
+        />
       ))}
     </ListGroup>
   )
@@ -19,4 +26,8 @@ const mapStateToProps = ({ userList: { users} }) => ({
   users,
 })
 
-export default connect(mapStateToProps, null)(UserList);
+const actions = {
+  onDelete: validateDeletion,
+}
+
+export default connect(mapStateToProps, actions)(UserList);
